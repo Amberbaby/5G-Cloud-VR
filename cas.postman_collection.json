@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "11e829d8-87fb-46c5-aee5-5c31c57f9a1e",
+		"name": "cas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "token-https://122.112.178.136:38443/cas/terminal/getToken",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Huawei@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test_xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "IMEI",
+							"value": "5622d8c996122f24edcf9640f16a52c1999a5d4ae927f68c3d0b2930c7214766b94718a446e7b504217e9abecb49599f0f265a6b622259fa644c6cd1e22843d0e0aa6503829738f1b324eb52abe2efc8dc2b15aaf6365acc1e0cfefd207a271d3735223605e64f2c6411ddc83959e3308ce15300f2b7a0a5c62d28cf2aa4dab02ecbe4000b92580e59772d6c61c6032d29abeb2e4af97b2728ed926bd8c7ac0da738aac9c87115ad8bd92545f0c247c2e025569c333d29c84805ac1378f17d0d44df3313b191f51f465ffebbc43cbf8a1de89911b6432194a78ad8fec51091219b2aba4b54144115c5a1666d37a281b25f2a7da70d8232d7f4b8b8950fc3af4f",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "3783147f70316d0e6a304b631bd409e275345a537c914e72f8aa7528341c965ebdb94574f4e790d2b2d1959c3acbc8deadf6c3ea317eb667152a29e19d57464b1fabe00fecfd9e0026655b2b12d442e1a834a9b4eb39cba541e16b13cb30166c96dc0b9a61d14c3e89faa50e88ee1123e67b9fe34c12e34fe837eaf0108e0fc815c67ea4dda2295024f825b6abff5b6fd0b195c09894d194e33adc66978563124e5cdd97f7c94db9dcfa080d3c2ae806a3c700523dd3c149f206f5c1a1405121366d05342b86ab2a1b26a066a771de591fbec66d0453693fe5c0dd1b0151851c0546a755bb12eb822d2ab76815366443cb0d783ba8f2b423bb558dad97f96bca",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "passwd",
+							"value": "4d9987d4519841744afae10f6d11dbd66512b34f0b0735d4b64a489941281f390404e5e07189d5b5f14e81a73094031282da988524dbfdfa70f461e5c1cc0c1a88f7441aa9cd685a7641fe6b278f8627d9d900f1c75323c5fec717a8c83eb1fa90e534a8972a1f7bcb5f24585418479d9c698c3aaa9d032d650d47536bb2a7c158ece822e894a9ad599a5d707227929bc53ef1df5161ed87f04f50c88b4345b26d71f4886433b05ee4b4c71c9a566c5512f8a6e7f2890c5906b447d1dd84f586485a3b243abc119ee78ac251fe2a77c9f952037b1eb25fcf792097efd8f05ac80dc269ee5554ebcd70b1af15f14279630f14ae2911d64e02abbde46e8c743090",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://122.112.178.136:38443/cas/terminal/getToken",
+					"protocol": "https",
+					"host": [
+						"122",
+						"112",
+						"178",
+						"136"
+					],
+					"port": "38443",
+					"path": [
+						"cas",
+						"terminal",
+						"getToken"
+					]
+				},
+				"description": "获取token"
+			},
+			"response": []
+		},
+		{
+			"name": "登录-https://122.112.178.136:38443/cas/login?service=https://122.112.178.136:38443/cas/sox/android/getTicket&username&clientId&cilentParam&IMEI",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "test_xc",
+							"type": "text"
+						},
+						{
+							"key": "clientId",
+							"value": "fa872afa-dfd5-4c6c-9179-5a11f53dace7",
+							"type": "text"
+						},
+						{
+							"key": "cilentParam",
+							"value": "tcNKn:b$K4XB$0[QzYZcwuy*",
+							"type": "text"
+						},
+						{
+							"key": "IMEI",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://122.112.178.136:38443/cas/login?service=https://122.112.178.136:38443/cas/sox/android/getTicket",
+					"protocol": "https",
+					"host": [
+						"122",
+						"112",
+						"178",
+						"136"
+					],
+					"port": "38443",
+					"path": [
+						"cas",
+						"login"
+					],
+					"query": [
+						{
+							"key": "service",
+							"value": "https://122.112.178.136:38443/cas/sox/android/getTicket"
+						}
+					]
+				},
+				"description": "登录"
+			},
+			"response": []
+		},
+		{
+			"name": "登出-https://122.112.178.136:38443/cas/logout?url=https://122.112.178.136:38443/cas/sox/android/getTicket&username=test_xc",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "test_xc",
+							"type": "text"
+						},
+						{
+							"key": "IMEI",
+							"value": "865360034291965",
+							"type": "text"
+						},
+						{
+							"key": "clientId",
+							"value": "d362ba05-6f8a-4bfe-8898-99dc14c2d856",
+							"type": "text"
+						},
+						{
+							"key": "cilentParam",
+							"value": "9K]j!Aao2Mn:M7)%|n2=2vfT",
+							"type": "text"
+						},
+						{
+							"key": "access_token",
+							"value": "1J;l-[h0{bO/6DbYd2_)Cm7g||Basic:dGVzdF94Yw==||1581400362337##BA8M4/w6NAz1aoa923TIoOyXShPn01Dhp1CvK8Ebb+B8ZcOTqU0sUfN8pmRmMi4mzWTSIm2h8RXpSFYdvH3ImJvhWOOBKXI4AiRvcEgDdxfBz9CcHNZhNNuAeHtp/r18Qk/CavWthUNdiO1ELLOdIazIO26tozU2hGDNkzsFP/3EG1gqYdfijNfGoGwiLmLSt33VK93Prb4ySfi5L9eCJiGwTQhcTmpop3zydLJxvSb4UbkVGCcDgPEq3ajwXbAXkQgNy1aP6RA6OtSk3kRlIV3CyYBPxVh5B9oQHQHX1MQW2gdKp9WfFCPloyIyrfX/FsYwt6oYFyzO5tcrSc3aEA==\",\"userId\":\"8f15cb80-4bdc-11ea-9f90-0255ac12011a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://122.112.178.136:38443/cas/logout?service=https://122.112.178.136:38443/cas/sox/android/getTicket",
+					"protocol": "https",
+					"host": [
+						"122",
+						"112",
+						"178",
+						"136"
+					],
+					"port": "38443",
+					"path": [
+						"cas",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "test_xc",
+							"disabled": true
+						},
+						{
+							"key": "IMEI",
+							"value": "865360034291965",
+							"disabled": true
+						},
+						{
+							"key": "service",
+							"value": "https://122.112.178.136:38443/cas/sox/android/getTicket"
+						}
+					]
+				},
+				"description": "登出"
+			},
+			"response": []
+		},
+		{
+			"name": "获取专题列表",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "GmjXxB^6&MXG|;=,|E25r%HC||Basic:dGVzdF94Yw==||1582011757608##fbuGJl6oazcR86QptAbqM7+9PL3/0Mt476++qMMgrPqZhScUQShM+0qrOo6sLsSzA/csQRV/zfqD5GuDMoMBv4RzRz1Pdl3PoqR+e2yF319mOD+HAuLRaDIFIdv0TI3EgwxNIkTBf5Axd8FXv40P8WLqlSooetu1RbyU5S18krnhZ8HmVPg2PYMAT2juK5jvw2XHZRoDZcIaa3o2ztJxZluqbw1hx9VMmrEQVj5sAbVa87y3pS+FBeRck/XerrNQ9ePAuQvW7VtMgdjPro/GPyGBPwZuhz5jlYgtgTc0NkQSQ+eiep0i6OROahVN0bh7vMsCXi972Stv/xY9V2OjLQ==",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accessToken",
+						"value": "&hfA(:Epm8il\n<4Mc]yG#ThDj||Basic:dGVzdF94Yw==||1582013368062##UxzokgYnKe1V6mwduxKmtNHvG32JnibtwRN+Q1MiEbqg1LlJVo5VTtxLzfaLCxX+AcuaO7Dd6niX+mxHlZF9Huu3Ao6iTqsrcA5nfnm44ETXsnK31OO/QVPRzDkiUwMwVL1nnaIu3uWmJ2v8MRlKcfRMNZXGazgoBFpWaQ9ZDxx4U8137txxLqNyFC9H2zVmDjuDf4MmAulch3JUT9Y/xC8LYFH5jPxDA6sXu1Nb1FWTvBWy7PnSWqMZfrTFuc15kHbUqTGyZQKXiRi/CwZ6yXXM869dB1F8OjrQS6N4EuidOzHmEeR2XhjPTR6FSYcaluCofgBLFC5YZkqa2yU9mg==",
+						"type": "text"
+					},
+					{
+						"key": "clientId",
+						"value": "bfab64f3-4081-403e-a57a-fe0c5fdd9047",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "<4Mc]yG#ThDj||Basic",
+						"value": "dGVzdF94Yw==||1582013368062##UxzokgYnKe1V6mwduxKmtNHvG32JnibtwRN+Q1MiEbqg1LlJVo5VTtxLzfaLCxX+AcuaO7Dd6niX+mxHlZF9Huu3Ao6iTqsrcA5nfnm44ETXsnK31OO/QVPRzDkiUwMwVL1nnaIu3uWmJ2v8MRlKcfRMNZXGazgoBFpWaQ9ZDxx4U8137txxLqNyFC9H2zVmDjuDf4MmAulch3JUT9Y/xC8LYFH5jPxDA6sXu1Nb1FWTvBWy7PnSWqMZfrTFuc15kHbUqTGyZQKXiRi/CwZ6yXXM869dB1F8OjrQS6N4EuidOzHmEeR2XhjPTR6FSYcaluCofgBLFC5YZkqa2yU9mg=="
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "type",
+							"value": "master",
+							"type": "text"
+						},
+						{
+							"key": "sort",
+							"value": "publishDate",
+							"type": "text"
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://122.112.178.136:38443/app/pageservice/1005/Enterprise_VR_Marketing/interface_for_topic_query",
+					"protocol": "https",
+					"host": [
+						"122",
+						"112",
+						"178",
+						"136"
+					],
+					"port": "38443",
+					"path": [
+						"app",
+						"pageservice",
+						"1005",
+						"Enterprise_VR_Marketing",
+						"interface_for_topic_query"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
